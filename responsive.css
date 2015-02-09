@@ -136,6 +136,9 @@ body {
     padding-left: 1.5625%;
     padding-right: 1.5625%;
     margin-right: 1.25%; }
+    .landing-box img {
+      width: 100%;
+      height: auto; }
     .landing-box a img {
       width: 100%;
       height: auto; }
@@ -231,7 +234,8 @@ body {
       visibility: hidden;
       opacity: 0;
       width: 125px;
-      background: #000;
+      background: #AAD3E4;
+      padding: 10px 5px;
       transition: visibility 0.5s; }
       #masthead nav span a {
         width: 125px;
@@ -240,17 +244,26 @@ body {
   #masthead nav:focus {
     pointer-events: none; }
     #masthead nav:focus > span {
-      z-index: 1;
+      position: absolute;
+      z-index: 9999;
       opacity: 1;
       visibility: visible;
       pointer-events: auto; }
 
   /*individual Family page
   *******************/
+  .fb-like {
+    z-index: 1; }
+
+  #user_actions {
+    z-index: 1; }
+
   .notice.contact_ap {
-    float: none; }
+    float: none;
+    z-index: 1; }
 
   #author {
+    z-index: 1;
     margin: 10px 0;
     padding-left: 0 !important; } }
 @media all and (max-width: 780px) {
@@ -407,7 +420,13 @@ body {
     font-size: 18px; }
 
   #sub_sections .more a {
-    font-size: 18px; } }
+    font-size: 18px; }
+
+  footer .social {
+    height: auto;
+    margin-bottom: 10px; }
+    footer .social a {
+      margin-bottom: 10px; } }
 @media all and (max-width: 680px) and (min-width: 569px) {
   .adv-search {
     font-size: 12px;
