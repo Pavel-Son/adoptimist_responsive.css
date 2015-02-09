@@ -1,0 +1,531 @@
+/*
+1. 320x568
+2. 360x640
+3. 768x1024
+4. 1366x768
+5. 320x480
+*/
+
+
+/* 1000px 
+**********/
+$header-blue: #009DCA;
+$slider-bg: #34778E;
+$content-blue: #AAD3E4;
+$banner-orange: #ff5d06;
+$border: #cccccc;
+$light-green: #99cd2d;
+$dark-green: #7cb806;
+
+@media all and (max-width: 1146px) {
+	#hero-stripe {
+		background: $slider-bg;
+	}
+	#hero {
+		//1177px?
+		//702 + 478 = 1180
+		background: white;
+		width: 100%;
+		left: 0;
+		margin: auto;
+		height: auto;
+		margin-bottom: 15px;
+		section {
+			width: 100%;
+		}
+		#graphic {
+			width: 61%;
+			position: relative;
+			img {
+				width: 100%;
+				height: auto;
+			}
+			.banner {
+				background: $banner-orange;
+				left: 0;
+				padding-left: 3%;
+				padding-right: 3%;
+				width: 94%;
+				height: auto;
+				span {
+					margin: 0;
+				}
+			}
+		}
+
+		#hero_get_started {
+			//(444+34)
+			width: 36%;
+			height: auto;
+			padding-left: 3%;
+			margin-right: 0;
+			.cta {
+				padding-top: 0; 
+			}
+			.row {
+				& > div div {
+					width: 48% !important;
+					padding-right: 2%;
+					.btn {
+						width: 94%;
+						padding-left: 2%;
+						padding-right: 2%;
+					}
+				}
+			}
+		}
+	}
+
+
+}
+
+@media all and (max-width: 1015px) { 
+	#masthead {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	div.main-column {
+		max-width: 96%;
+		padding: 2%;
+	}
+	
+	#masthead nav {
+		right: 20px;
+	}
+	#hero {
+		width: 104%;
+		margin: -20px -2% 20px;
+		section {
+			display: -webkit-box;
+			display: -moz-box;
+			display: box;
+			-webkit-box-orient: vertical;
+			-moz-box-orient: vertical;
+			box-orient: vertical;
+		}
+		#graphic {
+			width: 100%;
+			position: relative;
+		}
+
+		#hero_get_started {
+			//Switch order of elements
+			-webkit-box-ordinal-group: 2;
+			-moz-box-ordinal-group: 2;
+			box-ordinal-group: 2;
+			//(444+34)
+			width: 94%;
+			padding: 3%;
+			margin-right: 0;
+			.row {
+				& > div {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	/*main page content blocks*/
+	.home .primary {
+		//495px
+		width: 51.5625%;
+		margin-right: 4.1666667%;
+	}
+	.home .secondary {
+		//425
+		float: left; 
+		width: 44.2708333%;
+		margin-left: 0;
+	}
+
+	/* Our families
+	*****************************/
+	.landing-box {
+		outline: solid 1px #dce0e1;
+		border: none; 
+		width: 20.416666666%;
+		padding-left: 1.5625%;
+		padding-right: 1.5625%;
+		margin-right: 1.25%;
+		a img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	#main .landing-box:nth-of-type(4n) {
+		margin-right: 0; 
+	}
+	/*how it works
+	**************************/
+	#considering-title-box {
+		max-width: 100%;
+		height: 100%;
+		padding: 0 25px;
+		padding-right: 0;
+		padding-bottom: 20px;
+		overflow: hidden; 
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		border-right: 25px solid #005675;
+		img {
+			margin-left: 0;
+		}
+		h1, h2 {
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+	}
+	#profile-container {
+		width: 100%;
+		.profile-icon {
+			width: 30%;
+			margin-right: 5%;
+		}
+		#profile-last {
+			margin-right: 0;
+		}
+	}
+	/*Blog
+	****************************************/
+	.adoptimist_blog {
+		#primary {
+			width: 65%;
+			padding-right: 5%;
+			img {
+				max-width: 100%;
+			}
+		}
+		#supplemental {
+			float: left;
+			margin-left: 2%;
+			width: 27%;
+		}
+	}
+	/*Plan info
+	****************************************/
+	#considering-title-box header {
+		float: none;
+	}
+	#join-free-btn {
+		position: relative;
+		top: 0;
+		margin-top: 25px;
+		left: 0;
+	}
+	#left-col {
+		width: 18%;
+		#side-nav {
+			width: 100%;
+			li {
+				width: 100%;
+				height: 100%;
+				a {
+					&.active-link {
+						background: rgba(0,0,0, 0.08);
+					}
+				}
+			}
+		}
+	}
+	#right-col {
+		img {
+			max-width: 100%;
+		}
+		width: 80%;
+		margin-left: 2%;
+	}
+
+	footer {
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 960px) {
+	#masthead nav {
+		color: white;
+		background: $content-blue;
+		padding: 5px;
+		border: 1px solid $slider-bg;  
+		border-radius: 5px;
+		&:before {
+			content: 'Menu';
+		}
+		span {
+			position: absolute;
+			top: 20px;
+			right: 0;
+			visibility: hidden;
+			opacity: 0;
+			width: 125px;
+			background: #000;
+			pointer-events: auto;
+			a {
+				width: 125px;
+				display: block;
+			}
+		}
+	}
+	#masthead nav:focus {
+		pointer-events: none;
+		& > span {
+			//position: absolute;
+			z-index: 1;
+			opacity: 1;
+			visibility: visible;
+			
+		}
+	}
+}
+
+@media all and (max-width: 780px) {
+	body {
+		padding-top: 20px; 
+	}
+	.home .primary {
+		width: 100%;
+		margin-right: 0;
+	}
+	.home .secondary {
+		float: left;
+		width: 100%;
+		margin-left: 0;
+	}
+	#main {
+		section {
+			& > article.landing-box {
+				width: 29%;
+				padding-left: 1.5%;
+				padding-right: 1.5%;
+				margin-right: 1.5%;
+			}
+			& > article.landing-box:nth-of-type(4n) {
+				margin-right: 1.5%;
+			}
+			& > article.landing-box:nth-of-type(3n) {
+				margin-right: 0;
+			}
+		}
+		#profile-container {
+			.profile-icon {
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 20px;
+				font-size: 12px;
+				p {
+					width: 380px;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+	#left-col {
+		width: 100%;
+	}
+	#right-col {
+		width: 100%;
+		margin-left: 0;
+	}
+}
+
+@media all and (max-width: 680px) {
+	#main {
+		section {
+			& > article.landing-box {
+				width: 46%;
+				padding-left: 1.5%;
+				padding-right: 1.5%;
+				margin-right: 2%;
+			}
+			& > article.landing-box:nth-of-type(4n) {
+				margin-right: 2%;
+			}
+			& > article.landing-box:nth-of-type(3n) {
+				margin-right: 2%;
+			}
+			& > article.landing-box:nth-of-type(2n) {
+				margin-right: 0;
+			}
+		}
+
+	}
+	#main {
+    	font-size: 12px;
+    }
+	.adoptimist_blog {
+	    #main {
+	    	font-size: 12px;
+	    	display: -webkit-box;
+		    display: -moz-box;
+		    display: box;
+
+		    -webkit-box-orient: vertical;
+		    -moz-box-orient: vertical;
+		    box-orient: vertical;
+		    .read-more {
+		    	font-size: 16.5px;
+		    	background: $light-green;
+		    	border: 1px solid $dark-green;
+		    	padding: 10px;
+		    	width: auto;
+		    	height: auto;
+		    	border-radius: 5px;
+		    }
+		    #primary {
+		    	width: 100%;
+		        -webkit-box-ordinal-group: 2;
+			    -moz-box-ordinal-group: 2;
+			    box-ordinal-group: 2;
+			    border-right: none;	
+		    }
+		    #supplemental {
+		    	width: 100%;
+		        -webkit-box-ordinal-group: 1;
+			    -moz-box-ordinal-group: 1;
+			    box-ordinal-group: 1;
+			    float: none;
+			    border-bottom: 1px solid $border;
+			    margin-bottom: 15px;
+		    }
+	    }
+	}
+	.input {
+		width: 100%;
+		margin: 0;
+		margin-bottom: 20px;
+		label {
+			width: 30%;
+		}
+		input {
+			width: 69%;
+			float: right;
+			margin: 0;
+		}
+	}
+} 
+@media all and (max-width: 680px) and (min-width: 569px) {
+	.adv-search {
+		font-size: 12px;
+		margin-left: 0;
+	}
+	#main {
+		#ap-sort { 
+			margin-right: 0;
+			.navbar-inner {
+				> .container > .float_left {
+					width: 100%;
+				}
+				padding-left: 0;
+			}
+		}
+		section {
+			& > article.landing-box {
+				height: 350px;
+			}
+		}
+		#filter {
+			.nav {
+				width: 30%;
+				float: left;
+				li {
+					width: 100%;
+					& > a{
+						width: 100%;
+						float: none;
+						.caret {
+							right: -12px;
+						}
+					}
+				}
+				&.search-box {
+					margin-right: 10px!important;
+					margin-left: 0!important;
+					margin-bottom: 5px!important;
+					width: 50%;
+					padding-left: 2%;
+					float: left;
+				}
+			}
+			.go-button {
+				float: right;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 568px) {
+	.adv-search {
+		font-size: 12px;
+		margin-left: 0;
+	}
+	#main {
+		#ap-sort { 
+			margin-right: 0;
+			.navbar-inner {
+				> .container > .float_left {
+					width: 100%;
+				}
+				padding-left: 0;
+			}
+		}
+		#filter {
+			.nav {
+				width: 70%;
+				float: left;
+				li {
+					width: 100%;
+					& > a{
+						width: 100%;
+						float: none;
+					}
+				}
+				&.search-box {
+					margin-right: 0!important;
+					margin-left: 0!important;
+					margin-bottom: 5px!important;
+					width: 98%;
+					padding-left: 2%;
+					float: left;
+				}
+			}
+			.go-button {
+				float: right;
+			}
+		}
+		section {
+			& > article.landing-box {
+				width: 94%;
+				height: 100%;
+				padding-left: 3%;
+				padding-right: 3%;
+				margin-right: 0;
+				p {
+					font-size: 16px;
+				} 
+			}
+		}
+	}
+}
+
+@media all and (max-width: 460px) {
+	.input {
+		width: 100%;
+		margin: 0;
+		margin-bottom: 20px; 
+		p {
+			font-size: 14px;
+			width: 100%;
+			margin: 0;
+		}
+		label {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		input {
+			width: 99%;
+			float: none;
+			margin: 5px 0;
+			//margin-top: 10px;
+		}
+	}
+}
