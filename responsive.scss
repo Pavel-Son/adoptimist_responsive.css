@@ -22,6 +22,8 @@ body {
 	min-width: 320px;
 }
 
+/* Breakpoint: 1146px
+**********************/
 @media all and (max-width: 1146px) {
 	div.main-column {
 		max-width: 96%;
@@ -102,6 +104,47 @@ body {
 		}
 	}
 
+	/*Hopeful parents
+	******************/
+	#hopeful-testimonial-box {
+		width: 100%;
+	}
+	#join-free-btn.ap-signup {
+		left: 15px;
+	}
+	#left-col {
+		width: 18%;
+		#side-nav {
+			width: 100%;
+			li {
+				width: 100%;
+				height: 100%;
+				a {
+					&.active-link {
+						background: rgba(0,0,0, 0.08);
+					}
+				}
+			}
+		}
+	}
+	#right-col {
+		img {
+			max-width: 100%;
+		}
+		width: 80%;
+		margin-left: 2%;
+		.hp-testimonial-box {
+			height: auto;
+			width: 96%;
+			padding: 2%;
+		}
+	}
+	/*Join
+	*************************/
+	#join-plans .submit {
+		left: 50%;
+		margin-left: -134px;
+	}
 
 	footer {
 		max-width: 96%;
@@ -119,6 +162,8 @@ body {
 	}	
 }
 
+/* Breakpoint: 1015px
+**********************/
 @media all and (max-width: 1015px) { 
 	#masthead {
 		padding-left: 20px;
@@ -281,6 +326,7 @@ body {
 	#right-col {
 		img {
 			max-width: 100%;
+			height: auto;
 		}
 		width: 80%;
 		margin-left: 2%;
@@ -291,7 +337,11 @@ body {
 	}
 }
 
+/* Breakpoint: 960px
+**********************/
 @media all and (max-width: 960px) {
+	/*Main menu dropdown
+	***************************/
 	#masthead nav {
 		color: white;
 		background: $content-blue;
@@ -303,7 +353,7 @@ body {
 		}
 		span {
 			position: absolute;
-			top: 20px;
+			top: 25px;
 			right: 0;
 			visibility: hidden;
 			opacity: 0;
@@ -347,6 +397,8 @@ body {
 	}
 }
 
+/* Breakpoint: 780px
+**********************/
 @media all and (max-width: 780px) {
 	.home .primary {
 		width: 100%;
@@ -414,6 +466,8 @@ body {
 	}
 }
 
+/* Breakpoint: 680px
+**********************/
 @media all and (max-width: 680px) {
 	#main {
 		section {
@@ -487,8 +541,7 @@ body {
 			float: right;
 			margin: 0;
 		}
-	}
-	
+	}	
 	/*Individual Family page
 	***********************/
 	.ap_profile {
@@ -515,8 +568,13 @@ body {
 			font-size: 18px;
 		}
 	}
-
-
+	#hopeful-testimonial-box {
+		width: 100%;
+		blockquote {
+			top: 15px;
+			width: 85%;	
+		}
+	}
 	#tabbed {
 		ul {
 			padding: 0;
@@ -532,7 +590,6 @@ body {
 			}
 		}
 	}
-
 	.ap_profile {
 		#main_photo {
 			float: none;
@@ -559,6 +616,19 @@ body {
 	#sub_sections .more a {
 		font-size: 18px;
 	}
+	#join-plans section {
+		width: 100%;
+		margin: 0;
+		margin-bottom: 25px;
+		min-height: 100px;
+		padding-bottom: 0;
+	}
+	#join-plans .submit {
+		position: relative;
+		left: 0;
+		margin: 25px auto 20px;
+		max-width: 100%;
+	}
 	footer {
 		.social {
 			height: auto;
@@ -569,6 +639,7 @@ body {
 		}
 	}
 } 
+
 @media all and (max-width: 680px) and (min-width: 569px) {
 	.adv-search {
 		font-size: 12px;
@@ -617,9 +688,10 @@ body {
 			}
 		}
 	}
-
 }
 
+/* Breakpoint: 568px
+**********************/
 @media all and (max-width: 568px) {
 	.adv-search {
 		font-size: 12px;
@@ -687,8 +759,43 @@ body {
 			margin-top: 10px;
 		}
 	}
+	#hopeful-testimonial-box  {
+		height: auto;
+		padding-bottom: 15px;
+		blockquote {
+			font-size: 2.7em;
+			position: relative;
+			width: 90%;	
+		}
+	}
+	#join-free-btn.ap-signup {
+		top: 0;
+		margin-top: 25px;
+		margin-left: 13px;
+		position: relative;
+	}
 }
 
+/* Breakpoint: 510px
+**********************/
+@media all and (max-width: 510px) {
+	#graphic {
+		.banner {
+			span, strong {
+				display: block;
+			}
+		}
+	}
+	#right-col img {
+		width: 100%;
+	}
+	#submit, .submit, .btn {
+		max-width: 100%;
+	}
+}
+
+/* Breakpoint: 460px
+**********************/
 @media all and (max-width: 460px) {
 	.input {
 		width: 100%;
@@ -716,8 +823,55 @@ body {
 			width: 100%;
 		}
 	}
+
+	/*Main menu
+	**************************/
+	#hero-stripe {
+		background: none;
+	}
+	#masthead {
+		height: auto;
+
+		a {
+			& > img {
+				width: 80%;
+				height: auto;
+				margin: auto;
+				display: block;
+				margin-bottom: 15px;
+			}
+		}
+		nav {
+			position: relative;
+			text-align: center;
+			width: 100%;
+			margin-left: 15px!important;
+			margin-top: 10px!important;
+			margin-bottom: 15px!important;
+			span {
+				width: 100%;
+				left: -6px;
+				a {
+					width: 100%;
+					text-align: center;
+					margin: auto;
+				}
+			}
+		}
+	}
+	#hero {
+		margin-top: 50px;
+	}
+	.fb-like {
+		margin-bottom: 15px;
+	}
+
+	/*
+	**************************/
 }
 
+/* Breakpoint: 320px
+**********************/
 @media all and (max-width: 320px) {
 	overflow: scroll;
 }

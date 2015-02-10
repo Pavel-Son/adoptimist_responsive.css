@@ -10,6 +10,8 @@
 body {
   min-width: 320px; }
 
+/* Breakpoint: 1146px
+**********************/
 @media all and (max-width: 1146px) {
   div.main-column {
     max-width: 96%;
@@ -72,6 +74,40 @@ body {
   .ap_profile #sub_sections {
     width: 71.969696969%; }
 
+  /*Hopeful parents
+  ******************/
+  #hopeful-testimonial-box {
+    width: 100%; }
+
+  #join-free-btn.ap-signup {
+    left: 15px; }
+
+  #left-col {
+    width: 18%; }
+    #left-col #side-nav {
+      width: 100%; }
+      #left-col #side-nav li {
+        width: 100%;
+        height: 100%; }
+        #left-col #side-nav li a.active-link {
+          background: rgba(0, 0, 0, 0.08); }
+
+  #right-col {
+    width: 80%;
+    margin-left: 2%; }
+    #right-col img {
+      max-width: 100%; }
+    #right-col .hp-testimonial-box {
+      height: auto;
+      width: 96%;
+      padding: 2%; }
+
+  /*Join
+  *************************/
+  #join-plans .submit {
+    left: 50%;
+    margin-left: -134px; }
+
   footer {
     max-width: 96%;
     padding-left: 2%;
@@ -81,6 +117,8 @@ body {
     width: 104%;
     margin-top: -20px;
     margin-left: -2%; } }
+/* Breakpoint: 1015px
+**********************/
 @media all and (max-width: 1015px) {
   #masthead {
     padding-left: 20px;
@@ -214,11 +252,16 @@ body {
     width: 80%;
     margin-left: 2%; }
     #right-col img {
-      max-width: 100%; }
+      max-width: 100%;
+      height: auto; }
 
   footer {
     width: 100%; } }
+/* Breakpoint: 960px
+**********************/
 @media all and (max-width: 960px) {
+  /*Main menu dropdown
+  ***************************/
   #masthead nav {
     color: white;
     background: #AAD3E4;
@@ -229,7 +272,7 @@ body {
       content: 'Menu'; }
     #masthead nav span {
       position: absolute;
-      top: 20px;
+      top: 25px;
       right: 0;
       visibility: hidden;
       opacity: 0;
@@ -266,6 +309,8 @@ body {
     z-index: 1;
     margin: 10px 0;
     padding-left: 0 !important; } }
+/* Breakpoint: 780px
+**********************/
 @media all and (max-width: 780px) {
   .home .primary {
     width: 100%;
@@ -314,6 +359,8 @@ body {
   #sub_sections h3, #supplemental h3, .ap_profile .album h3 {
     font-size: 16px;
     width: auto; } }
+/* Breakpoint: 680px
+**********************/
 @media all and (max-width: 680px) {
   #main section > article.landing-box {
     width: 46%;
@@ -393,6 +440,12 @@ body {
       margin-bottom: 10px;
       font-size: 18px; }
 
+  #hopeful-testimonial-box {
+    width: 100%; }
+    #hopeful-testimonial-box blockquote {
+      top: 15px;
+      width: 85%; }
+
   #tabbed ul {
     padding: 0;
     height: auto; }
@@ -421,6 +474,19 @@ body {
 
   #sub_sections .more a {
     font-size: 18px; }
+
+  #join-plans section {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 25px;
+    min-height: 100px;
+    padding-bottom: 0; }
+
+  #join-plans .submit {
+    position: relative;
+    left: 0;
+    margin: 25px auto 20px;
+    max-width: 100%; }
 
   footer .social {
     height: auto;
@@ -459,6 +525,8 @@ body {
       float: left; }
   #main #filter .go-button {
     float: right; } }
+/* Breakpoint: 568px
+**********************/
 @media all and (max-width: 568px) {
   .adv-search {
     font-size: 12px;
@@ -503,7 +571,34 @@ body {
       font-size: 14px; }
   #user_actions .buttons {
     display: block;
-    margin-top: 10px; } }
+    margin-top: 10px; }
+
+  #hopeful-testimonial-box {
+    height: auto;
+    padding-bottom: 15px; }
+    #hopeful-testimonial-box blockquote {
+      font-size: 2.7em;
+      position: relative;
+      width: 90%; }
+
+  #join-free-btn.ap-signup {
+    top: 0;
+    margin-top: 25px;
+    margin-left: 13px;
+    position: relative; } }
+/* Breakpoint: 510px
+**********************/
+@media all and (max-width: 510px) {
+  #graphic .banner span, #graphic .banner strong {
+    display: block; }
+
+  #right-col img {
+    width: 100%; }
+
+  #submit, .submit, .btn {
+    max-width: 100%; } }
+/* Breakpoint: 460px
+**********************/
 @media all and (max-width: 460px) {
   .input {
     width: 100%;
@@ -522,7 +617,46 @@ body {
       margin: 5px 0; }
 
   #supplemental img {
-    width: 100%; } }
+    width: 100%; }
+
+  /*Main menu
+  **************************/
+  #hero-stripe {
+    background: none; }
+
+  #masthead {
+    height: auto; }
+    #masthead a > img {
+      width: 80%;
+      height: auto;
+      margin: auto;
+      display: block;
+      margin-bottom: 15px; }
+    #masthead nav {
+      position: relative;
+      text-align: center;
+      width: 100%;
+      margin-left: 15px !important;
+      margin-top: 10px !important;
+      margin-bottom: 15px !important; }
+      #masthead nav span {
+        width: 100%;
+        left: -6px; }
+        #masthead nav span a {
+          width: 100%;
+          text-align: center;
+          margin: auto; }
+
+  #hero {
+    margin-top: 50px; }
+
+  .fb-like {
+    margin-bottom: 15px; }
+
+  /*
+  **************************/ }
+/* Breakpoint: 320px
+**********************/
 @media all and (max-width: 320px) {
   overflow: scroll; }
 
