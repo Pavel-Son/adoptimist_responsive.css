@@ -21,10 +21,40 @@ $dark-green: #7cb806;
 body {
 	min-width: 320px;
 }
-
+#masthead {
+	.fb-like {
+		margin-right: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	a#openMenu {
+		display: none;
+	}
+}
+#drop-nav li > ul {
+	position: absolute;
+	background: #b7d6e2;
+	z-index: 100;
+}
+//Prev
+#drop-nav li:hover ul {
+	display: none;
+}
 /* Breakpoint: 1146px
 **********************/
 @media all and (max-width: 1146px) {
+	#drop-nav li ul li {
+		height: auto;
+	}
+	#drop-nav li:hover ul {
+		z-index: 1000;
+	}
+	#em-subnav ul li  {
+		a {
+			white-space: normal;
+		}
+	}
 	div.main-column {
 		max-width: 96%;
 		padding: 2%;
@@ -41,6 +71,7 @@ body {
 		margin: auto;
 		height: auto;
 		margin-bottom: 15px;
+		margin-top: -20px;
 		section {
 			width: 100%;
 		}
@@ -145,13 +176,41 @@ body {
 		left: 50%;
 		margin-left: -134px;
 	}
+	#considering-title-box.em-title {
+		#join-free-btn, #view-families-link {
+			left: inherit;
+			right: 25px;
+		}
+		#view-families-link {
+
+		}
+	}
+	/*Considering adoption
+	************************/
+	#em-subnav-box {
+		max-width: 100%;
+		height: 100%;
+		#em-subnav {
+			padding: 0;
+			margin: 0;			
+			& > ul {
+				max-width: 100%;
+				&:after {
+					content: '';
+					display: block;
+					visibility: hidden;
+					height: 0;
+					clear: both;
+				}
+			}
+		}
+	}
 
 	footer {
 		max-width: 96%;
 		padding-left: 2%;
 		padding-right: 2%;
 	}
-
 }
 
 @media all and (max-width: 1046px) and (min-width: 1015px) {
@@ -168,6 +227,9 @@ body {
 	#masthead {
 		padding-left: 20px;
 		padding-right: 20px;
+		.fb-like {
+			right: 20px;
+		}
 	}
 	div.main-column {
 		max-width: 96%;
@@ -271,6 +333,16 @@ body {
 			top: 0;
 		}
 	}
+	#considering-title-box.em-title {
+		border-right: 25px solid #3D748B;
+		#join-free-btn, #view-families-link {
+			left: inherit;
+			right: 25px;
+		}
+		#view-families-link {
+
+		}
+	}
 	#profile-container {
 		width: 100%;
 		.profile-icon {
@@ -280,6 +352,12 @@ body {
 		#profile-last {
 			margin-right: 0;
 		}
+	}
+	#join-free-btn {
+		margin-left: 25px;
+	}
+	#view-families-link {
+		top: 5px;
 	}
 	/*Blog
 	****************************************/
@@ -331,6 +409,11 @@ body {
 		width: 80%;
 		margin-left: 2%;
 	}
+	/*Considering adoption
+	**************************/
+	#considering-title-box.em-title #join-free-btn, #considering-title-box.em-title #view-families-link {
+		position: relative;
+	}
 
 	footer {
 		width: 100%;
@@ -342,39 +425,44 @@ body {
 @media all and (max-width: 960px) {
 	/*Main menu dropdown
 	***************************/
+	.logged_out #masthead nav a:after {
+		content: none;
+	}
+	.logged_out #masthead nav a:last-child {
+		margin-right: 0;
+	}
 	#masthead nav {
 		color: white;
 		background: $content-blue;
 		padding: 5px;
 		border: 1px solid $slider-bg;  
 		border-radius: 5px;
-		&:before {
-			content: 'Menu';
+		a#openMenu {
+			display: block;
+			&:after {
+				content: none;
+			}
+		}
+		&:hover {
+			cursor: pointer;
 		}
 		span {
 			position: absolute;
 			top: 25px;
 			right: 0;
-			visibility: hidden;
-			opacity: 0;
+			display: none;
 			width: 125px;
+			border-radius: 5px;
 			background: $content-blue;
+			border: 1px solid #34778E;
 			padding: 10px 5px;
-			transition: visibility 0.5s;
+			visibility: visible;
+			opacity: 1;
 			a {
 				width: 125px;
 				display: block;
+				margin-bottom: 10px;
 			}
-		}
-	}
-	#masthead nav:focus {
-		pointer-events: none;
-		& > span {
-			position: absolute;
-			z-index: 9999;
-			opacity: 1;
-			visibility: visible;
-			pointer-events: auto;
 		}
 	}
 
@@ -464,6 +552,22 @@ body {
 		font-size: 16px;
 		width: auto;
 	}
+	.family-btn {
+		font-size: 16px;
+	}
+	/*Considering adoption
+	**********************/
+	#em-right-col {
+		width: 100%;
+		margin-left: 0;
+		float: none;
+		iframe {
+			margin: auto;
+		}
+	}
+	.considering-txt {
+		width: 100%;
+	}
 }
 
 /* Breakpoint: 680px
@@ -492,6 +596,15 @@ body {
 	#main {
     	font-size: 12px;
     }
+    .family-btn, .adoptimist_blog #main .read-more {
+		font-size: 16.5px;
+		background: $light-green;
+		border: 1px solid $dark-green;
+		padding: 10px;
+		width: auto;
+		height: auto;
+		border-radius: 5px;
+    }
 	.adoptimist_blog {
 	    #main {
 	    	font-size: 12px;
@@ -502,15 +615,6 @@ body {
 		    -webkit-box-orient: vertical;
 		    -moz-box-orient: vertical;
 		    box-orient: vertical;
-		    .read-more {
-		    	font-size: 16.5px;
-		    	background: $light-green;
-		    	border: 1px solid $dark-green;
-		    	padding: 10px;
-		    	width: auto;
-		    	height: auto;
-		    	border-radius: 5px;
-		    }
 		    #primary {
 		    	width: 100%;
 		        -webkit-box-ordinal-group: 2;
@@ -774,6 +878,10 @@ body {
 		margin-left: 13px;
 		position: relative;
 	}
+	.input input, .input select, .input textarea {
+		margin-left: 0;
+		max-width: 100%;
+	}
 }
 
 /* Breakpoint: 510px
@@ -797,6 +905,40 @@ body {
 /* Breakpoint: 460px
 **********************/
 @media all and (max-width: 460px) {
+	#masthead {
+		.fb-like {
+			position: relative;
+			right: 0;
+		}
+		nav span a {
+			margin-bottom: 10px;
+		}
+	}
+	#em-subnav-box #em-subnav > ul {
+		margin-left: 0;
+		width: 94%;
+		padding-right: 3%;
+		padding-left: 3%;
+		& > li {
+			width: 100%;
+			height: 100%;
+			a {
+				.small-txt {
+					float: right;
+					margin-top: 2px;
+				}
+			}
+			& > ul {
+				position: relative;
+				width: 100%;
+				background: #b7d6e2;
+				li {
+					float: none;
+					margin: 8px 0 14px 0;
+				}
+			}
+		}
+	}
 	.input {
 		width: 100%;
 		margin: 0;
@@ -855,6 +997,7 @@ body {
 					width: 100%;
 					text-align: center;
 					margin: auto;
+					margin-bottom: 10px;
 				}
 			}
 		}
@@ -865,9 +1008,24 @@ body {
 	.fb-like {
 		margin-bottom: 15px;
 	}
+	#hero #hero_get_started .row > div div .btn {
+		height: auto;
+	}
 
 	/*
 	**************************/
+}
+
+/* Breackpoint: 345px
+**********************/
+@medial all and (max-width: 345px) {
+	#considering-title-box {
+		header {
+			h1 {
+				font-size: 3.2em;
+			}
+		}
+	}
 }
 
 /* Breakpoint: 320px

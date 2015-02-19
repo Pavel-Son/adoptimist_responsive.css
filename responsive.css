@@ -10,9 +10,34 @@
 body {
   min-width: 320px; }
 
+#masthead .fb-like {
+  margin-right: 0;
+  position: absolute;
+  top: 0;
+  right: 0; }
+#masthead a#openMenu {
+  display: none; }
+
+#drop-nav li > ul {
+  position: absolute;
+  background: #b7d6e2;
+  z-index: 100; }
+
+#drop-nav li:hover ul {
+  display: none; }
+
 /* Breakpoint: 1146px
 **********************/
 @media all and (max-width: 1146px) {
+  #drop-nav li ul li {
+    height: auto; }
+
+  #drop-nav li:hover ul {
+    z-index: 1000; }
+
+  #em-subnav ul li a {
+    white-space: normal; }
+
   div.main-column {
     max-width: 96%;
     padding: 2%; }
@@ -26,7 +51,8 @@ body {
     left: 0;
     margin: auto;
     height: auto;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    margin-top: -20px; }
     #hero section {
       width: 100%; }
     #hero #graphic {
@@ -108,6 +134,27 @@ body {
     left: 50%;
     margin-left: -134px; }
 
+  #considering-title-box.em-title #join-free-btn, #considering-title-box.em-title #view-families-link {
+    left: inherit;
+    right: 25px; }
+
+  /*Considering adoption
+  ************************/
+  #em-subnav-box {
+    max-width: 100%;
+    height: 100%; }
+    #em-subnav-box #em-subnav {
+      padding: 0;
+      margin: 0; }
+      #em-subnav-box #em-subnav > ul {
+        max-width: 100%; }
+        #em-subnav-box #em-subnav > ul:after {
+          content: '';
+          display: block;
+          visibility: hidden;
+          height: 0;
+          clear: both; }
+
   footer {
     max-width: 96%;
     padding-left: 2%;
@@ -123,6 +170,8 @@ body {
   #masthead {
     padding-left: 20px;
     padding-right: 20px; }
+    #masthead .fb-like {
+      right: 20px; }
 
   div.main-column {
     max-width: 96%;
@@ -207,6 +256,12 @@ body {
       left: 0;
       top: 0; }
 
+  #considering-title-box.em-title {
+    border-right: 25px solid #3D748B; }
+    #considering-title-box.em-title #join-free-btn, #considering-title-box.em-title #view-families-link {
+      left: inherit;
+      right: 25px; }
+
   #profile-container {
     width: 100%; }
     #profile-container .profile-icon {
@@ -214,6 +269,12 @@ body {
       margin-right: 5%; }
     #profile-container #profile-last {
       margin-right: 0; }
+
+  #join-free-btn {
+    margin-left: 25px; }
+
+  #view-families-link {
+    top: 5px; }
 
   /*Blog
   ****************************************/
@@ -255,6 +316,11 @@ body {
       max-width: 100%;
       height: auto; }
 
+  /*Considering adoption
+  **************************/
+  #considering-title-box.em-title #join-free-btn, #considering-title-box.em-title #view-families-link {
+    position: relative; }
+
   footer {
     width: 100%; } }
 /* Breakpoint: 960px
@@ -262,36 +328,40 @@ body {
 @media all and (max-width: 960px) {
   /*Main menu dropdown
   ***************************/
+  .logged_out #masthead nav a:after {
+    content: none; }
+
+  .logged_out #masthead nav a:last-child {
+    margin-right: 0; }
+
   #masthead nav {
     color: white;
     background: #AAD3E4;
     padding: 5px;
     border: 1px solid #34778E;
     border-radius: 5px; }
-    #masthead nav:before {
-      content: 'Menu'; }
+    #masthead nav a#openMenu {
+      display: block; }
+      #masthead nav a#openMenu:after {
+        content: none; }
+    #masthead nav:hover {
+      cursor: pointer; }
     #masthead nav span {
       position: absolute;
       top: 25px;
       right: 0;
-      visibility: hidden;
-      opacity: 0;
+      display: none;
       width: 125px;
+      border-radius: 5px;
       background: #AAD3E4;
+      border: 1px solid #34778E;
       padding: 10px 5px;
-      transition: visibility 0.5s; }
+      visibility: visible;
+      opacity: 1; }
       #masthead nav span a {
         width: 125px;
-        display: block; }
-
-  #masthead nav:focus {
-    pointer-events: none; }
-    #masthead nav:focus > span {
-      position: absolute;
-      z-index: 9999;
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto; }
+        display: block;
+        margin-bottom: 10px; }
 
   /*individual Family page
   *******************/
@@ -358,7 +428,22 @@ body {
 
   #sub_sections h3, #supplemental h3, .ap_profile .album h3 {
     font-size: 16px;
-    width: auto; } }
+    width: auto; }
+
+  .family-btn {
+    font-size: 16px; }
+
+  /*Considering adoption
+  **********************/
+  #em-right-col {
+    width: 100%;
+    margin-left: 0;
+    float: none; }
+    #em-right-col iframe {
+      margin: auto; }
+
+  .considering-txt {
+    width: 100%; } }
 /* Breakpoint: 680px
 **********************/
 @media all and (max-width: 680px) {
@@ -377,6 +462,15 @@ body {
   #main {
     font-size: 12px; }
 
+  .family-btn, .adoptimist_blog #main .read-more {
+    font-size: 16.5px;
+    background: #99cd2d;
+    border: 1px solid #7cb806;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    border-radius: 5px; }
+
   .adoptimist_blog #main {
     font-size: 12px;
     display: -webkit-box;
@@ -385,14 +479,6 @@ body {
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     box-orient: vertical; }
-    .adoptimist_blog #main .read-more {
-      font-size: 16.5px;
-      background: #99cd2d;
-      border: 1px solid #7cb806;
-      padding: 10px;
-      width: auto;
-      height: auto;
-      border-radius: 5px; }
     .adoptimist_blog #main #primary {
       width: 100%;
       -webkit-box-ordinal-group: 2;
@@ -585,7 +671,11 @@ body {
     top: 0;
     margin-top: 25px;
     margin-left: 13px;
-    position: relative; } }
+    position: relative; }
+
+  .input input, .input select, .input textarea {
+    margin-left: 0;
+    max-width: 100%; } }
 /* Breakpoint: 510px
 **********************/
 @media all and (max-width: 510px) {
@@ -600,6 +690,31 @@ body {
 /* Breakpoint: 460px
 **********************/
 @media all and (max-width: 460px) {
+  #masthead .fb-like {
+    position: relative;
+    right: 0; }
+  #masthead nav span a {
+    margin-bottom: 10px; }
+
+  #em-subnav-box #em-subnav > ul {
+    margin-left: 0;
+    width: 94%;
+    padding-right: 3%;
+    padding-left: 3%; }
+    #em-subnav-box #em-subnav > ul > li {
+      width: 100%;
+      height: 100%; }
+      #em-subnav-box #em-subnav > ul > li a .small-txt {
+        float: right;
+        margin-top: 2px; }
+      #em-subnav-box #em-subnav > ul > li > ul {
+        position: relative;
+        width: 100%;
+        background: #b7d6e2; }
+        #em-subnav-box #em-subnav > ul > li > ul li {
+          float: none;
+          margin: 8px 0 14px 0; }
+
   .input {
     width: 100%;
     margin: 0;
@@ -645,7 +760,8 @@ body {
         #masthead nav span a {
           width: 100%;
           text-align: center;
-          margin: auto; }
+          margin: auto;
+          margin-bottom: 10px; }
 
   #hero {
     margin-top: 50px; }
@@ -653,8 +769,16 @@ body {
   .fb-like {
     margin-bottom: 15px; }
 
+  #hero #hero_get_started .row > div div .btn {
+    height: auto; }
+
   /*
   **************************/ }
+/* Breackpoint: 345px
+**********************/
+@medial all and (max-width: 345px) {
+  #considering-title-box header h1 {
+    font-size: 3.2em; } }
 /* Breakpoint: 320px
 **********************/
 @media all and (max-width: 320px) {
