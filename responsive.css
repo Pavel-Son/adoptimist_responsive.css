@@ -335,11 +335,13 @@ body {
     margin-right: 0; }
 
   #masthead nav {
+    font-size: 16px;
     color: white;
     background: #AAD3E4;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #34778E;
-    border-radius: 5px; }
+    border-radius: 5px;
+    margin-top: 40px; }
     #masthead nav a#openMenu {
       display: block; }
       #masthead nav a#openMenu:after {
@@ -348,7 +350,7 @@ body {
       cursor: pointer; }
     #masthead nav span {
       position: absolute;
-      top: 25px;
+      top: 35px;
       right: 0;
       display: none;
       width: 125px;
@@ -361,7 +363,7 @@ body {
       #masthead nav span a {
         width: 125px;
         display: block;
-        margin-bottom: 10px; }
+        margin-bottom: 15px; }
 
   /*individual Family page
   *******************/
@@ -751,7 +753,7 @@ body {
       position: relative;
       text-align: center;
       width: 100%;
-      margin-left: 15px !important;
+      margin-left: 9px !important;
       margin-top: 10px !important;
       margin-bottom: 15px !important; }
       #masthead nav span {

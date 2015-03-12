@@ -432,11 +432,13 @@ body {
 		margin-right: 0;
 	}
 	#masthead nav {
+		font-size: 16px;
 		color: white;
 		background: $content-blue;
-		padding: 5px;
+		padding: 10px;
 		border: 1px solid $slider-bg;  
 		border-radius: 5px;
+		margin-top: 40px;
 		a#openMenu {
 			display: block;
 			&:after {
@@ -448,7 +450,7 @@ body {
 		}
 		span {
 			position: absolute;
-			top: 25px;
+			top: 35px;
 			right: 0;
 			display: none;
 			width: 125px;
@@ -461,7 +463,7 @@ body {
 			a {
 				width: 125px;
 				display: block;
-				margin-bottom: 10px;
+				margin-bottom: 15px;
 			}
 		}
 	}
@@ -987,9 +989,9 @@ body {
 			position: relative;
 			text-align: center;
 			width: 100%;
-			margin-left: 15px!important;
-			margin-top: 10px!important;
-			margin-bottom: 15px!important;
+			margin-left: 9px !important;
+			margin-top: 10px !important;
+			margin-bottom: 15px !important;
 			span {
 				width: 100%;
 				left: -6px;
