@@ -837,18 +837,18 @@ body {
 				float: right;
 			}
 		}
-		section {
-			& > article.landing-box {
-				width: 94%;
-				height: 100%;
-				padding-left: 3%;
-				padding-right: 3%;
-				margin-right: 0;
-				p {
-					font-size: 16px;
-				} 
-			}
-		}
+		// section {
+		// 	& > article.landing-box {
+		// 		width: 94%;
+		// 		height: 100%;
+		// 		padding-left: 3%;
+		// 		padding-right: 3%;
+		// 		margin-right: 0;
+		// 		p {
+		// 			font-size: 16px;
+		// 		} 
+		// 	}
+		// }
 	}
 	#user_actions {
 		.paging {
@@ -965,6 +965,11 @@ body {
 	#supplemental {
 		img {
 			width: 100%;
+		}
+	}
+	section {
+		& > article.landing-box {
+			min-height: 396px;
 		}
 	}
 
